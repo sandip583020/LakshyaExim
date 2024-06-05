@@ -13,16 +13,37 @@ namespace LAKSHYAEXIM.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult HomePage()
+        {
+            return View();
+        }
+        public IActionResult AboutUS()
+        {
+            return View();
+        }
+        public IActionResult OurTeam()
+        {
+            return View();
+        }
+        public IActionResult Product()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+
+
+        public IActionResult ProductDetails(int productId)
         {
+            ViewBag.ProductId = productId;
+
             return View();
         }
-        public IActionResult About()
+
+        //public IActionResult ProductDetails()
+        //{
+        //    return View();
+        //}
+        public IActionResult ContactUs()
         {
             return View();
         }

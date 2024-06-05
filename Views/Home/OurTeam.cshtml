@@ -1,0 +1,97 @@
+﻿@{
+    var BaseURL = "https://localhost:7208/api/";
+    var imageURL = "https://localhost:7208";
+    var MemberList = "";
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        $.ajax({
+            url: '@BaseURL' + "Doctor/AllDoctors",
+            method: 'GET',
+            dataType: 'json',
+            success: function (result) {
+                var MemberList = result.data;
+                MemberList.forEach(function (member) {
+                    var fullImageUrl = "@imageURL" + member.imagePath;
+
+                    var memberHtml =
+                        "<div class='flex flex-col items-center justify-center w-full sm:w-[370px] shadow-md rounded-xl dark:text-gray-800 mx-4 my-11 bg-white bg-opacity-80 animate-fade-down'>" +
+                        "<img src='" + fullImageUrl + "' alt='Mr.Sagar Variya' class='w-48 h-48 mx-auto m-10 rounded-full shadow-[0px_1px_6px_5px_#00000024]' />" +
+                        "<div class='space-y-6 text-center divide-y dark:divide-gray-300'>" +
+                        "<div class='my-2 space-y-2'>" +
+                        "<h2 class='text-xl font-semibold sm:text-2xl'>" + member.doctorName + "</h2>" +
+                        "<p class='px-5 text-xs sm:text-base dark:text-gray-600'>" + member.details + "</p>" +
+                        "</div>" +
+                        "</div>" +
+                        "<img src='/image/waves2.png' class='rounded-lg' alt='Waves' />" +
+                        "</div>";
+
+                    $('#Managing-Committee').append(memberHtml);
+                });
+            },
+            error: function (error) {
+                $('#cmsData').html('<p>An error has occurred</p>');
+                console.log(error);
+            }
+        });
+    </script>
+
+
+}
+<div>
+    <div class="Part-One relative bg-gradient-to-r h-[547px] text-white overflow-hidden mt-[-81px] animate-fade-up">
+        <div class="absolute inset-0">
+            <img src="/image/ourteamherosection.png" alt="Background Image" class="object-cover object-center w-full h-full" />
+            <div class="absolute inset-0 bg-blue-950/60 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
+        </div>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+            <h1 class="text-5xl font-bold leading-tight mb-4">Our Team</h1>
+        </div>
+    </div>
+
+    <div class="part-two" style="background-image: url('/image/bgimage.png'); background-size: cover; background-position: center;">
+        <div class="flex items-center justify-center pt-14 animate-fade-right">
+            <h2 class="text-center text-2xl font-bold text-gray-800 md:mb-2 lg:text-3xl">
+                <div class="heading flex relative">
+                    <div class="Rectangle3 absolute h-6 rounded-full w-44 bg-red-100 left-24 -bottom-1"></div>
+                    <h2 class="text-2xl font-bold relative z-10">Managing</h2>
+                    <h2 class="Feature-Member text-2xl text-red-500 ml-2 font-bold relative z-10">Committee</h2>
+                </div>
+            </h2>
+        </div>
+        <div id="Managing-Committee" class="Ano-Box bg-slate-50 flex flex-wrap items-center mt-14 justify-center h-auto w-full max-w-[1300px] mx-auto shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)]">
+            @* <div class="flex flex-col items-center justify-center w-full sm:w-[370px] shadow-md rounded-xl dark:text-gray-800 mx-4 my-11 bg-white bg-opacity-80 animate-fade-down">
+            <img src="/image/sagarbhai.jpg" alt="Mr. Sagar Variya" class="w-48 h-48 mx-auto m-10 rounded-full shadow-[0px_1px_6px_5px_#00000024]" />
+            <div class="space-y-6 text-center divide-y dark:divide-gray-300">
+            <div class="my-2 space-y-2">
+            <h2 class="text-xl font-semibold sm:text-2xl">Mr. Sagar Variya</h2>
+            <p class="px-5 text-xs sm:text-base dark:text-gray-600">President</p>
+            </div>
+            </div>
+            <img src="/image/waves2.png" class="rounded-lg" alt="Waves" />
+            </div>
+            <div class="flex flex-col items-center justify-center w-full sm:w-[370px] shadow-md rounded-xl dark:text-gray-800 m-4 bg-white bg-opacity-80 animate-fade-up">
+            <img src="/image/sandip.jpg" alt="Mr. Sandip Tapaniya" class="w-48 h-48 mx-auto m-10 rounded-full shadow-[0px_1px_6px_5px_#00000024]" />
+            <div class="space-y-6 text-center divide-y dark:divide-gray-300">
+            <div class="my-2 space-y-2">
+            <h2 class="text-xl font-semibold sm:text-2xl">Mr. Sandip Tapaniya</h2>
+            <p class="px-5 text-xs sm:text-base dark:text-gray-600">Co-Founder</p>
+            </div>
+            </div>
+            <img src="/image/waves2.png" class="rounded-lg" alt="Waves" />
+            </div>
+            <div class="flex flex-col items-center justify-center w-full sm:w-[370px] shadow-md rounded-xl dark:text-gray-800 m-4 bg-white bg-opacity-80 animate-fade-down">
+            <img src="/image/meet.jpg" alt="Mr. Meet Variya" class="w-48 h-48 mx-auto m-10 rounded-full shadow-[0px_1px_6px_5px_#00000024]" />
+            <div class="space-y-6 text-center divide-y dark:divide-gray-300">
+            <div class="my-2 space-y-2">
+            <h2 class="text-xl font-semibold sm:text-2xl">Mr. Meet Variya</h2>
+            <p class="px-5 text-xs sm:text-base dark:text-gray-600">Export Head of Gems & Jewelry Segment</p>
+            </div>
+            </div>
+            <img src="/image/waves2.png" class="rounded-lg" alt="Waves" />
+            </div> *@
+        </div>
+    </div>
+
+</div>
