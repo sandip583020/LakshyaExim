@@ -429,3 +429,8 @@ a[b-dv5qfy7sa2] {
     max-height: 300px; /* Set a max height for the description */
     overflow-y: auto; /* Add a scrollbar if content overflows */
 }
+
+.custom-dropdown {
+    width: auto; /* Let the dropdown size adjust dynamically */
+    min-width: 200px; /* Set a minimum width */
+}

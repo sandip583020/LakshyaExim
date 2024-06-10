@@ -39,12 +39,15 @@
                 CatagoryList.forEach(function (Catagory) {
                     var fullImageUrl = "@imageURL" + Catagory.imagePath;
                     var CatagoryHtml =
-                        "<div onclick='deleteAppointmentReport(" + Catagory.productCategoryID + ")' class='bg-white border p-6 rounded-lg shadow-md hover:shadow-lg cursor-pointer'>" +
+                        "<div onclick='ProductCatagoryFunc(" + Catagory.productCategoryID + ")' class='bg-white border p-6 rounded-lg shadow-md hover:shadow-lg cursor-pointer'>" +
                         "<img src='" + fullImageUrl + "' alt='Lavender' class='w-full h-40 object-cover rounded mb-4' />" +
                         "<h2 class='text-xl font-semibold text-center'>" + Catagory.productCategoryName + "</h2>" +
                         "</div>";
 
+                    var dropdownOption = "<option value='" + Catagory.productCategoryID + "'>" + Catagory.productCategoryName + "</option>";
+
                     $('#Catagory-container').append(CatagoryHtml);
+                    $('#Catagory-dropdown').append(dropdownOption);
                 });
             },
             error: function (error) {
@@ -53,7 +56,31 @@
             }
         });
 
-        function deleteAppointmentReport(id) {
+        // Add event listener for the dropdown
+        $('#Catagory-dropdown').on('change', function () {
+            var selectedCategoryId = $(this).val();
+            ProductCatagoryFunc(selectedCategoryId);
+        });
+
+        // Function to handle screen size changes
+        function handleScreenSizeChange() {
+            if ($(window).width() <= 768) { // Mobile view
+                $('#Catagory-container').addClass('hidden');
+                $('#Catagory-dropdown').removeClass('hidden');
+            } else {
+                $('#Catagory-container').removeClass('hidden');
+                $('#Catagory-dropdown').addClass('hidden');
+            }
+        }
+
+        // Initial check and event listener for screen size changes
+        $(document).ready(function () {
+            handleScreenSizeChange();
+            $(window).resize(handleScreenSizeChange);
+        });
+
+
+        function ProductCatagoryFunc(id) {
             $('#Product-Card').empty();
 
             if (id === 0) {
@@ -121,9 +148,13 @@
             Essential Oil Categories
         </h1>
         <div class="flex justify-center">
-            <div id="Catagory-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full max-w-7xl">
-            </div>
+            <div id="Catagory-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full max-w-7xl"></div>
+            <select id="Catagory-dropdown" class="hidden custom-dropdown w-full max-w-7xl p-2 border rounded-md">
+                <option value="" disabled selected>Category-specific Product Display</option>
+            </select>
         </div>
+
+
     </div>
 
     <div id="Product-Card" class="grid grid-cols-1 md:grid-cols-3 mx-6 mt-20">

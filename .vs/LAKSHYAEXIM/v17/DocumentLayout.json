@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\Tapti Technology Projects\\LakshyaExim\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EC47F8B-F15C-4981-92DB-B6720705FED9}|LAKSHYAEXIM.csproj|d:\\tapti technology projects\\lakshyaexim\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5EC47F8B-F15C-4981-92DB-B6720705FED9}|LAKSHYAEXIM.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC47F8B-F15C-4981-92DB-B6720705FED9}|LAKSHYAEXIM.csproj|d:\\tapti technology projects\\lakshyaexim\\views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5EC47F8B-F15C-4981-92DB-B6720705FED9}|LAKSHYAEXIM.csproj|solutionrelative:views\\home\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EC47F8B-F15C-4981-92DB-B6720705FED9}|LAKSHYAEXIM.csproj|d:\\tapti technology projects\\lakshyaexim\\views\\home\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5EC47F8B-F15C-4981-92DB-B6720705FED9}|LAKSHYAEXIM.csproj|solutionrelative:views\\home\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5EC47F8B-F15C-4981-92DB-B6720705FED9}|LAKSHYAEXIM.csproj|d:\\tapti technology projects\\lakshyaexim\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EC47F8B-F15C-4981-92DB-B6720705FED9}|LAKSHYAEXIM.csproj|solutionrelative:views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EC47F8B-F15C-4981-92DB-B6720705FED9}|LAKSHYAEXIM.csproj|d:\\tapti technology projects\\lakshyaexim\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -31,53 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Tapti Technology Projects\\LakshyaExim\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Tapti Technology Projects\\LakshyaExim\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Title": "Product.cshtml",
+              "DocumentMoniker": "D:\\Tapti Technology Projects\\LakshyaExim\\Views\\Home\\Product.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Product.cshtml",
+              "ToolTip": "D:\\Tapti Technology Projects\\LakshyaExim\\Views\\Home\\Product.cshtml",
+              "RelativeToolTip": "Views\\Home\\Product.cshtml",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAUwIMAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-05T09:53:11.645Z",
+              "WhenOpened": "2024-06-06T09:38:50.582Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomePage.cshtml",
-              "DocumentMoniker": "D:\\Tapti Technology Projects\\LakshyaExim\\Views\\Home\\HomePage.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\HomePage.cshtml",
-              "ToolTip": "D:\\Tapti Technology Projects\\LakshyaExim\\Views\\Home\\HomePage.cshtml",
-              "RelativeToolTip": "Views\\Home\\HomePage.cshtml",
-              "ViewState": "AQIAAAMBAAAAAAAAAAAAABEBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-05T09:50:28.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ContactUs.cshtml",
-              "DocumentMoniker": "D:\\Tapti Technology Projects\\LakshyaExim\\Views\\Home\\ContactUs.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\ContactUs.cshtml",
-              "ToolTip": "D:\\Tapti Technology Projects\\LakshyaExim\\Views\\Home\\ContactUs.cshtml",
-              "RelativeToolTip": "Views\\Home\\ContactUs.cshtml",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAcwGEAAABuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-05T09:32:37.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "site.css",
               "DocumentMoniker": "D:\\Tapti Technology Projects\\LakshyaExim\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "D:\\Tapti Technology Projects\\LakshyaExim\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAADYBAAAAAAAAAAAowEABAAABAAAA",
+              "ViewState": "AQIAAKgBAAAAAAAAAAAAALMBAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-05T09:29:09.032Z",
+              "WhenOpened": "2024-06-05T10:20:42.972Z",
               "EditorCaption": ""
             }
           ]
