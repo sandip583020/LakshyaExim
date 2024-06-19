@@ -148,6 +148,16 @@ a[b-dv5qfy7sa2] {
     }
 }
 
+@media (max-width: 556px) {
+    .WeAreDedic {
+        font-size: 20px;
+    }
+
+    .Feature-Member {
+        font-size: 20px;
+    }
+}
+
 /*AboutUs Page Style */
 
 @media only screen and (max-width: 600px) {
