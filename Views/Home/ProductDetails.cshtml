@@ -22,15 +22,11 @@
                 method: 'GET',
                 dataType: 'json',
                 success: function (result) {
-                    // Assuming result.data is an array of product details
                     var product = result.data;
                     var fullImageUrl = "@imageURL" + product[0].imagePath;
 
-                    // Display product category name
                     $('#OilCatagory').html('<h1 class="text-3xl font-bold text-center mb-6 mt-6">' + product[0].productCategoryName + '</h1>');
 
-                    // Construct the HTML for product details
-                    // Construct the HTML for product details
                     var productDetailsHtml =
                         "<div class='container px-5 py-10 mx-auto'>" +
                         "<div class='lg:w-4/5 mx-auto flex flex-wrap'>" +
@@ -43,9 +39,8 @@
                         "<p class='leading-relaxed mb-6 product-description'>" + product[0].details + "</p>" +
                         "<div class='flex mt-6 items-center pb-2 border-b-2 border-gray-200 mb-5'></div>" +
                         "<div class='flex align-content-center'>" +
-                        "<button onclick='sendWhatsAppInquiry(\"" + product[0].productName + "\", \"" + product[0].details + "\")' class='flex mx-auto text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded'>Inquire on WhatsApp</button>" +
+                         "<button onclick='sendWhatsAppInquiry(\"" + product[0].productName + "\")' class='flex mx-auto text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded'>Inquire on WhatsApp</button>" +
                         "</div></div></div></div>";
-                    // Append the product details HTML to the container
                     $('#Product-Detail-Container').append(productDetailsHtml);
                 },
                 error: function (error) {
@@ -59,24 +54,20 @@
             window.open(url, '_blank');
         }
 
-        var whatsappNumber = "7600702098";
 
-        function sendWhatsAppInquiry(productName, details) {
-            // Remove HTML tags from details
-            var detailsText = details.replace(/<\/?[^>]+(>|$)/g, "").split(' ').slice(0, 12).join(' ');
+        function sendWhatsAppInquiry(productName) {
+            var message = "Hi! I'm interested in the product: " + productName;
 
-            // Construct the WhatsApp message
-            var message = "Hi! I'm interested in the product: " + productName + ", Details: " + detailsText;
+            var whatsappNumber = "7600702098";
 
-            // Encode the message for URL
             var encodedMessage = encodeURIComponent(message);
 
-            // Construct the WhatsApp API link with the pre-filled message and phone number
             var whatsappLink = "https://api.whatsapp.com/send?phone=" + whatsappNumber + "&text=" + encodedMessage;
 
-            // Open WhatsApp in a new tab with the pre-filled message and phone number
             window.open(whatsappLink, '_blank');
+            console.log("whatsappLink")
         }
+
 
         $(document).ready(function () {
             $('form#requirementForm').on('submit', function (event) {

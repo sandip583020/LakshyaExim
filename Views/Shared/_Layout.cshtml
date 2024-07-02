@@ -271,10 +271,10 @@
                                 Privacy Policy
                             </a>
                         </div>
-                       @*  <div>
-                            <a href="#" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
-                                Cookie settings
-                            </a>
+                        @*  <div>
+                        <a href="#" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
+                        Cookie settings
+                        </a>
                         </div> *@
                     </nav>
                 </div>
@@ -285,6 +285,12 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        document.getElementById('dark-mode-toggle').addEventListener('click', function () {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
 
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
