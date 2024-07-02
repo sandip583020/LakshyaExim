@@ -1,0 +1,446 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.top {
+    margin-top: -10px !important;
+}
+
+
+@media (max-width: 556px) {
+    .svg-class {
+        margin-left: -100px;
+    }
+}
+
+@media (max-width: 475px) {
+    .meet {
+        margin-right: 140px;
+    }
+}
+
+
+a[b-dv5qfy7sa2] {
+    color: inherit !important;
+}
+
+/*HomePage Style*/
+
+@media only screen and (max-width: 1700px) and (min-width: 925px) {
+    .Intro-Part {
+        margin-left: 55px;
+    }
+}
+
+@media only screen and (max-width: 910px) and (min-width: 624px) {
+    .Lakshya-Exim {
+        text-align: center;
+    }
+
+    .International-Market-For {
+        text-align: center;
+    }
+
+    .Ultimate-Brands {
+        text-align: center;
+    }
+
+    .Para {
+        text-align: center;
+    }
+
+    .Btn {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 624px) and (min-width: 200px) {
+    .Lakshya-Exim {
+        text-align: center;
+        font-size: large;
+    }
+
+    .International-Market-For {
+        text-align: center;
+        font-size: 33px; /* Adjusted from 40px */
+    }
+
+    .Ultimate-Brands {
+        text-align: center;
+        font-size: 35px; /* Adjusted from 40px */
+    }
+
+    .Para {
+        text-align: center;
+        font-size: 21px;
+    }
+
+    .Btn {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Intro-Part {
+        margin-left: 10px;
+    }
+
+    .Part-First {
+        margin-top: -40px;
+    }
+}
+
+.focus-in-expand {
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1958px) and (min-width: 1440px) {
+    .Part-First {
+        margin-top: -80px;
+    }
+}
+
+
+@media only screen and (max-width: 1440px) and (min-width: 768px) {
+    .Part-First {
+        margin-top: -80px;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .Para-1 {
+        text-align: center;
+    }
+
+    .Another-Para {
+        text-align: center;
+    }
+}
+
+@media (max-width: 556px) {
+    .WeAreDedic {
+        font-size: 20px;
+    }
+
+    .Feature-Member {
+        font-size: 20px;
+    }
+}
+
+/*AboutUs Page Style */
+
+@media only screen and (max-width: 600px) {
+    .based-gujarat-para {
+        text-align: center;
+    }
+}
+
+
+
+@media only screen and (min-width: 1050px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .Part-One {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1700px) and (min-width: 1000px) {
+    .Clip_path_group {
+        height: 356px;
+        margin-left: 120px;
+    }
+}
+
+@media only screen and (max-width: 2500px) and (min-width: 800px) {
+    .Profile-Owner {
+        margin-right: 289px;
+    }
+
+    .LakshyaExim-Intro-Heading {
+        margin-right: 472px;
+    }
+}
+
+/*output Team Page Style*/
+
+@media only screen and (max-width: 2300px) and (min-width: 1650px) {
+    .part-two {
+        height: 900px;
+    }
+}
+
+@media only screen and (max-width: 1650px) and (min-width: 1224px) {
+    .part-two {
+        height: 870px;
+    }
+}
+
+@media only screen and (max-width: 1224px) and (min-width: 1135px) {
+    .part-two {
+        height: 1298px;
+    }
+}
+
+@media only screen and (max-width: 1135px) and (min-width: 800px) {
+    .part-two {
+        height: 1298px;
+    }
+}
+
+/*Product Page Css*/
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-bottom: 8px;
+}
+
+.button {
+    --color: #283d80;
+    padding: 7px 42px;
+    background-color: transparent;
+    border-radius: 13px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 2px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+}
+
+    .button::before,
+    .button::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: var(--color);
+        transition: 1s ease;
+    }
+
+    .button::before {
+        top: -1em;
+        left: -1em;
+    }
+
+    .button::after {
+        left: calc(100% + 1em);
+        top: calc(100% + 1em);
+    }
+
+    .button:hover::before,
+    .button:hover::after {
+        height: 410px;
+        width: 410px;
+    }
+
+    .button:hover {
+        color: rgb(37, 76, 88);
+        color: white;
+    }
+
+    .button:active {
+        filter: brightness(.8);
+    }
+
+
+/*contactus style*/
+
+.ContactUS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 640px) {
+    .sm\:items-start {
+        align-items: start;
+    }
+
+    .sm\:w-\[80\%\] {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:w-\[60\%\] {
+        width: 60%;
+    }
+}
+
+.w-form {
+    width: 100%;
+}
+
+/*in form Contact Field*/
+.iti--separate-dial-code .iti__selected-flag {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 16px 0px 0px 16px;
+}
+
+.iti {
+    width: 100%;
+}
+
+
+/* Regular styling for form elements */
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.text-lg {
+    font-size: 1.125rem; /* Adjust as needed */
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.text-gray-600 {
+    color: #4b5563;
+}
+
+.bg-gray-50 {
+    background-color: #f9fafb;
+}
+
+.border-gray-300 {
+    border-color: #e5e7eb;
+}
+
+.text-gray-900 {
+    color: #111827;
+}
+
+.text-sm {
+    font-size: 0.875rem; /* Adjust as needed */
+}
+
+.rounded-2xl {
+    border-radius: 1rem; /* Adjust as needed */
+}
+
+.focus\:ring-blue-500:focus {
+    outline-color: #3b82f6;
+    outline-offset: 0.25rem; /* Adjust as needed */
+    outline-width: 2px; /* Adjust as needed */
+}
+
+.focus\:border-blue-500:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.p-2\.5 {
+    padding: 0.625rem; /* Adjust as needed */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 660px) {
+    .block {
+        display: block;
+        text-align: center; /* Center align the labels */
+    }
+
+    .relative {
+        position: relative;
+    }
+
+    .inline-block {
+        display: inline-block;
+    }
+
+    .w-full {
+        width: 100%;
+    }
+
+    #message-input {
+        width: 96%;
+        margin-left: 7px;
+    }
+
+    #phone {
+        width: 96%;
+        margin-left: 7px;
+    }
+
+    #email-input {
+        width: 96%;
+        margin-left: 7px;
+    }
+
+    #name-input {
+        width: 96%;
+        margin-left: 7px;
+    }
+
+    .Send-BTN {
+        margin-left: 100px;
+    }
+}
+
+/*ProductDetail css*/
+
+.fixed-size-image {
+    width: 100%;
+    max-width: 500px; /* Adjust the max-width as needed */
+    height: auto; /* Keep the aspect ratio */
+}
+
+.product-description {
+    max-height: 300px; /* Set a max height for the description */
+    overflow-y: auto; /* Add a scrollbar if content overflows */
+}
+
+.custom-dropdown {
+    width: auto; /* Let the dropdown size adjust dynamically */
+    min-width: 200px; /* Set a minimum width */
+}

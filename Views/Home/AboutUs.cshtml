@@ -1,0 +1,114 @@
+﻿@{
+    var BaseURL = "https://api.lakshyaexim.in/api/";
+    var cmcDetails = "";
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                url: '@BaseURL' + "CMS/AllCMS",
+                method: 'GET',
+                dataType: 'json',
+                success: function (result) {
+                    var cmcDetails = result.data;
+                    var introductionRecord = cmcDetails.find(function (record) {
+                        return record.title === "AboutUS";
+                    });
+                    // Display the introductionRecord in the specified div
+                    $('.based-gujarat-para ').html('<p class="mb-2 leading-relaxed">' + introductionRecord.details + '</p>');
+                },
+                error: function (error) {
+                    $('#cmsData').html('<p>An error has occurred</p>');
+                    console.log(error);
+                }
+            });
+        });
+    </script>
+
+}
+
+<div>
+    <div class="Part-One relative bg-gradient-to-r from-white h-[547px] text-white overflow-hidden mt-[-81px] animate-fade-up">
+        <div class="absolute inset-0">
+            <img src="/image/AboutUsHeroSection.png" alt="Background Image" class="object-cover object-center w-full h-full" />
+            <div class="absolute inset-0 bg-blue-950/60 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
+        </div>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+            <h1 class="text-5xl font-bold leading-tight mb-4">About Us</h1>
+        </div>
+    </div>
+
+    <section class="Part-Two text-gray-600 body-font" style="background-image: url('https://i.postimg.cc/wTPhYkGf/Desktop-1-1.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="container mx-auto px-5 py-24 flex flex-col md:flex-row items-center">
+            <div class="mb-10 md:mb-0 md:w-1/2">
+                <img class="Clip_path_group object-cover object-center rounded" alt="hero" src="/Image/Clip_path_group.png">
+            </div>
+            <div class="heading lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-center items-center ">
+                <div class="LakshyaExim-Intro-Heading mb-4 flex space-x-1 relative">
+                    <div class="Rectangle1 absolute h-6 rounded-full w-28 bg-red-100 left-20 -bottom-1"></div>
+                    <h2 class="text-2xl font-bold relative z-10">Lakshya</h2>
+                    <h2 class="text-2xl text-red-500 font-bold relative z-10">Exim</h2>
+                </div>
+                <p class="based-gujarat-para mb-2 leading-relaxed">
+                   @*  Based in Gujarat, India, we are a premier essential oil export company offering a diverse range of 100% pure and natural oils. With stringent quality control measures and a satisfaction guarantee, we ensure only the finest products reach our customers, backed by exceptional customer service.
+                </p> *@
+                <div class="Profile-Owner flex justify-center">
+                    <div class=" flex items-center gap-3">
+                        <img class="w-20 h-20 rounded-full" src="/image/sagarbhai.jpg" alt="">
+                        <div class="font-medium dark:text-white">
+                            <div class="text-black">Sagar Variya</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400">President</div>
+                        </div>
+                        <img src="/image/signature.png" class="w-32 h-28 mt-6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full bg-gray-200 pt-20 p-4">
+        <div class="grid gap-14 md:grid-cols-3 mb-14 md:gap-5">
+
+            <div class="rounded-xl bg-white p-6 text-center shadow-xl animate-fade-down md:animate-none">
+                <div class="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+                    <img src="/image/missionicon.png" class="w-10 h-10" alt="Mission Icon" />
+                </div>
+                <h1 class="text-darken mb-3 text-xl font-medium lg:px-14">
+                    OUR MISSION
+                </h1>
+                <p class="px-4 text-gray-500">
+                    Our Mission at Lakshya Exim is to earn the trust of our customers by providing them with superior services and the highest quality products. We strive to achieve this by leveraging advanced technology and fostering a culture of innovation.
+                </p>
+            </div>
+
+            <div class="rounded-xl bg-white p-6 text-center shadow-xl animate-fade-up md:animate-none">
+                <div class="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
+                    <img src="/image/icongroth.png" class="h-10 w-10" alt="Growth Icon" />
+                </div>
+                <h1 class="text-darken mb-3 text-xl font-medium lg:px-14">
+                    OUR VISION
+                </h1>
+                <p class="px-4 text-gray-500">
+                    Our Vision is to establish ourselves as a renowned global leader by cultivating strong partnerships with our valued customers. We aim to achieve this by offering innovative products that significantly improve the quality of people's lives.
+                </p>
+            </div>
+
+            <div class="rounded-xl bg-white p-6 text-center shadow-xl animate-fade-down md:animate-none">
+                <div class="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-blue-500 shadow-rose-500/40">
+                    <img src="/image/corevaluesicon.png" class="h-10 w-10" alt="Core Values Icon" />
+                </div>
+                <h1 class="text-darken mb-3 text-xl font-medium lg:px-14">
+                    CORE VALUES
+                </h1>
+                <p class="px-4 text-gray-500">
+                    We uphold a culture of honesty, integrity, and ethical conduct throughout every facet of our business operations. We value and treat our customers with the utmost respect and trust.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
